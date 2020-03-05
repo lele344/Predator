@@ -90,4 +90,8 @@ Disabilitati i diag pin su pins_BTT_SKR_V1_4.h (la turbo usa la stessa tabella i
 //
 ```
 
+## Aggiunta guida per operazioni post firmware upgrade
+
+
+[Vai alla guida](https://github.com/lele344/Predator/blob/master/after_firmware_update.md)
 

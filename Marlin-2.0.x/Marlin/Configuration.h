@@ -484,10 +484,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Predator stock a 240 gradi
-  #define DEFAULT_Kp 14.47
-  #define DEFAULT_Ki 1.14
-  #define DEFAULT_Kd 46.05
+  // Predator M303 E0 S235 C8
+  #define DEFAULT_Kp 14.61
+  #define DEFAULT_Ki 1.23
+  #define DEFAULT_Kd 43.47
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -537,10 +537,10 @@
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
   
-  //Predator stock a 90 gradi
-  #define DEFAULT_bedKp 73.60
-  #define DEFAULT_bedKi 14.71
-  #define DEFAULT_bedKd 245.59
+  //Predator M303 E-1 S90 C8 
+  #define DEFAULT_bedKp 77.39
+  #define DEFAULT_bedKi 15.46
+  #define DEFAULT_bedKd 258.21
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -646,7 +646,7 @@
   #define DELTA_PRINTABLE_RADIUS 185.0    // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 440.0        // (mm)
+  #define DELTA_DIAGONAL_ROD 439.12        // (mm)
 
   // Distance between bed and nozzle Z home position
   #define DELTA_HEIGHT 438.08       // (mm) Get this value from G33 auto calibrate
@@ -654,7 +654,7 @@
   //#define DELTA_ENDSTOP_ADJ { -2.96,-2.98,0.00 } // Get these values from G33 auto calibrate
 #define DELTA_ENDSTOP_ADJ {-0.84,+0.00,-0.05 }
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 226.93             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 226.93           // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
@@ -802,7 +802,7 @@
 
 // delta speeds must be the same on xyz
 #define DEFAULT_XYZ_STEPS_PER_UNIT ((XYZ_FULL_STEPS_PER_ROTATION) * (XYZ_MICROSTEPS) / double(XYZ_BELT_PITCH) / double(XYZ_PULLEY_TEETH))  // 80
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 395.0 }  // default steps per unit for Kossel (GT2, 20 tooth)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, DEFAULT_XYZ_STEPS_PER_UNIT, 419.34 }  // default steps per unit for Kossel (GT2, 20 tooth)
 
 
 /**
@@ -1301,9 +1301,9 @@
    */
   #define G26_MESH_VALIDATION
   #if ENABLED(G26_MESH_VALIDATION)
-    #define MESH_TEST_NOZZLE_SIZE    0.6  // (mm) Diameter of primary nozzle.
-    #define MESH_TEST_LAYER_HEIGHT   0.3  // (mm) Default layer height for the G26 Mesh Validation Tool.
-    #define MESH_TEST_HOTEND_TEMP  215    // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
+    #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for the G26 Mesh Validation Tool.
+    #define MESH_TEST_HOTEND_TEMP  235    // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
     #define MESH_TEST_BED_TEMP      60    // (°C) Default bed temperature for the G26 Mesh Validation Tool.
     #define G26_XY_FEEDRATE         20    // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
     #define G26_RETRACT_MULTIPLIER   1.0  // G26 Q (retraction) used by default between mesh test elements.
@@ -1346,8 +1346,8 @@
 
   #define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 25            // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 7      // Don't use more than 15 points per axis, implementation limited.
+  #define MESH_INSET 35            // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
